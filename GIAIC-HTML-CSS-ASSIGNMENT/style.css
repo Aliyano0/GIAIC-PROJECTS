@@ -1,0 +1,570 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --main-green: #8dc63f;
+  --main-yellow: #ffbd1a;
+  --main-gray: #212121;
+  --stars-color: #ef4136;
+  --process-b-color: rgba(166, 163, 163, 0.94);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  /* background-color: darkgrey; */
+  font-family: "Roboto", sans-serif;
+}
+
+/* HEADER STARTS HERE */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.contact-info-section {
+  background-color: var(--main-gray);
+  color: white;
+  height: 5vh;
+  padding: 0px 4%;
+  display: flex;
+  justify-content: space-between;
+}
+.social-media-icons {
+  height: 100%;
+  width: 15%;
+  margin: 0 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.social-media-icons a {
+  text-decoration: none;
+  color: #fff;
+}
+.social-media-icons a i {
+  font-size: 1.2rem;
+}
+.social-media-icons a i:hover {
+  color: var(--main-green);
+}
+
+.ph-numbers {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 25px;
+}
+.ph-numbers a {
+  color: #fff;
+}
+.phone-icons {
+  color: var(--main-green) !important;
+  margin: 0 2px 0 4px;
+}
+.call-me-back-btn {
+  background-color: var(--main-green);
+  color: #000;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 6px 8px;
+  border-radius: 2px;
+  cursor: pointer;
+  letter-spacing: 0;
+}
+
+.logo-and-navlinks-section {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  overflow: hidden;
+  padding: 0px 3%;
+  position: relative;
+}
+.panaverse-logo {
+  margin-top: 8px;
+  height: 80px;
+  margin-left: 20px;
+}
+.navbar {
+  width: 70%;
+}
+.navbar-lists {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 16px;
+  font-weight: 550;
+  width: 100%;
+  /* gap: 20px; */
+}
+.navbar-lists li {
+  list-style: none;
+  cursor: pointer;
+}
+.portfolio-li {
+  font-size: 19px;
+  font-weight: 900 !important;
+  position: relative;
+}
+.navbar-lists li a {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+.yellow-underline {
+  background-color: var(--main-yellow);
+  height: 8px;
+  width: 8rem;
+  position: absolute;
+  bottom: 0;
+  right: 37.7%;
+}
+
+/* HEADER ENDS HERE */
+
+/* MAIN STARTS HERE */
+
+/* HERO SECTION */
+.slider-container {
+  position: relative;
+  /* width: 100vw; */
+  height: 35rem;
+  /* overflow: hidden; */
+}
+.slider1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+.slider1 img {
+  width: 100%;
+  /* height: 35rem; */
+  z-index: 1;
+  object-fit: cover;
+  /* height: 70%; */
+}
+.slider-background {
+  background-color: var(--main-gray);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 22;
+}
+.hero-text-and-btn {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.8rem;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #544d4d;
+  z-index: 22;
+  /* color: #d6d5d5; */
+}
+.hero-text-and-btn h1 {
+  font-size: 5rem;
+}
+.hero-text-and-btn p {
+  font-size: 1.2rem;
+  line-height: 28px;
+}
+.hero-text-and-btn h1 {
+  font-size: 5rem;
+}
+.readmore-btn {
+  background-color: var(--main-yellow);
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 550;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
+}
+.slider-nav {
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 8px;
+}
+.radiobtn {
+  border-radius: 50%;
+  height: 1.7rem;
+  width: 1.7rem;
+  background-color: #fff;
+  opacity: 45%;
+  border: none;
+}
+.radiobtn1 {
+  opacity: 100%;
+}
+/* HERO SECTION ENDS */
+
+/* OUR ADVANTAGES SECTION STARTS HERE */
+/* UTILS FOR EVERY SECTION */
+.our-advantages-section {
+  width: 100%;
+  margin-bottom: 5rem;
+}
+.section-heading {
+  margin: 0 auto;
+  width: 30%;
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+  flex-direction: column;
+  font-size: 1rem;
+  gap: 0.5rem;
+}
+.section-heading h1 {
+  font-size: 3rem;
+}
+.section-heading .advantages {
+  color: var(--main-green);
+}
+.section-heading p {
+  color: #817979;
+  text-align: center;
+}
+/* UTILS FOR EVERY SECTION */
+.advantages-cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.card {
+  text-align: center;
+  width: 15%;
+}
+.card-text {
+  padding: 20px 0;
+}
+.card-text h3 {
+  padding: 10px 0;
+  font-size: 24px;
+}
+.card-text p {
+  color: #544d4d;
+}
+.card-img img {
+  width: 7rem;
+}
+/* OUR ADVANTAGES SECTION ENDS HERE */
+
+/* ABOUT US SECTION STARTS HERE */
+.about-us-section {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+.about-us-desc {
+  display: flex;
+}
+.about-us-section h1 {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+}
+.about-us-text-btn {
+  width: 45%;
+  margin-top: 5rem;
+}
+.about-us-text-btn p {
+  margin: 2rem;
+  font-size: large;
+}
+.about-read-more-btn {
+  margin-left: 2rem;
+  padding: 0.8rem 2.5rem;
+  border-radius: 0.35rem;
+  background-color: var(--main-yellow);
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 3px 3px 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.about-us-images {
+  width: 55%;
+}
+.laptop-img {
+  margin-left: 10rem;
+  margin-top: 5rem;
+  position: relative;
+}
+.laptop-img img {
+  width: 20rem;
+}
+.laptop-yellow-screen {
+  background-color: var(--main-yellow);
+  position: absolute;
+  top: 14%;
+  left: 5.7%;
+  z-index: -1;
+  height: 40%;
+  width: 26%;
+}
+.laptop-yellow-screen ul li {
+  list-style: none;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.laptop-green-screen {
+  height: 10rem;
+  width: 7rem;
+  background-color: var(--main-green);
+  position: absolute;
+  bottom: 47.4%;
+  left: 14%;
+  z-index: 122;
+}
+.dots {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.dot {
+  background-color: #000;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  right: 50%;
+  z-index: 15;
+}
+.left-hand {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+/* ABOUT US SECTION ENDS HERE */
+
+/* OUR SERVICES SECTION STARTS HERE */
+
+/* USED CSS FOR SERVICES CARDS FROM ADVANTAGES */
+.services-cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.star-circle {
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-yellow);
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+/* OUR SERVICES SECTION ENDS HERE */
+
+/* OUR PORTFOLIO SECTION STARTS HERE */
+.our-portfolio-section {
+  background-color: #212121;
+  color: #fff;
+  padding: 15px 0;
+  margin-top: 5rem;
+}
+.portfolio-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0 3rem 0;
+  gap: 3rem;
+}
+.portfolio-nav ul li {
+  list-style: none;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.logo-grid {
+  width: 85vw;
+  height: 500px;
+  background-color: blanchedalmond;
+  margin: 0 auto 3rem auto;
+}
+.portfolio-logo {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+}
+/* OUR PORTFOLIO SECTION ENDS HERE */
+
+/* OUR PROCESS SECTION STARTS HERE */
+
+.process-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.process-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+.process-icon {
+  border: 2px solid var(--process-b-color);
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.process-number {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  z-index: 11;
+  background-color: var(--main-yellow);
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  border-radius: 50%;
+}
+.process-texts {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.process-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 5px;
+}
+.process-text h4 {
+  margin: 5px 0;
+  font-size: 17px;
+}
+.process-connecting-line {
+  height: 2px;
+  width: 8rem;
+  background-color: var(--process-b-color);
+}
+
+/* OUR PROCESS SECTION ENDS HERE */
+
+/* PEOPLE ABOUT US SECTION STARTS HERE */
+.people-about-us {
+  margin-bottom: 2rem;
+}
+.reviews-container {
+  width: 90%;
+  margin: 0 auto;
+}
+.reviews-row1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid var(--process-b-color);
+}
+.row1-padding {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+.row2-padding {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+.left-review {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  border-right: 2px solid var(--process-b-color);
+  padding-right: 10rem;
+}
+.left-review-icon {
+  font-size: 6rem;
+  color: var(--process-b-color);
+}
+.left-review-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.right-review {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding-left: 10rem;
+}
+.right-review-icon {
+  font-size: 6rem;
+  color: var(--process-b-color);
+}
+.right-review-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.reviews-row2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews-slider-nav {
+  margin: 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.reviews-radiobtn {
+  border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
+  background-color: rgb(255, 140, 0);
+  opacity: 45%;
+  border: none;
+}
+.reviews-radiobtn1 {
+  opacity: 100%;
+}
+/* PEOPLE ABOUT US SECTION ENDS HERE */
+
+
+/* OUR SKILLS SECTION STARTS HERE */
+
+
+/* OUR SKILLS SECTION ENDS HERE */
