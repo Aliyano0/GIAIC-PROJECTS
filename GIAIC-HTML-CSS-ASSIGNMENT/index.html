@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PanaCloud Portfolio</title>
     <link
+      rel="shortcut icon"
+      href="assets/images/panaverse-logo.jpg"
+      type="image/x-icon"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="hamburger.css" />
     <script
       src="https://kit.fontawesome.com/ce54ecf978.js"
       crossorigin="anonymous"
@@ -49,17 +56,32 @@
         </div>
         <nav class="navbar">
           <ul class="navbar-lists">
-            <div class="yellow-underline"></div>
-            <li><a href="#why-us">WHY US</a></li>
+            <li>
+              <a href="#why-us">WHY US</a>
+            </li>
             <li><a href="#about-us">ABOUT</a></li>
             <li><a href="#services">SERVICES</a></li>
-            <li class="portfolio-li"><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
             <li><a href="#process">PROCESS</a></li>
             <li><a href="#reviews">REVIEWS</a></li>
             <li><a href="#skills">OUR SKILLS</a></li>
             <li><a href="#contact">CONTACT US</a></li>
           </ul>
         </nav>
+        <div class="hamburger">
+          <svg id="hamburger" class="Header__toggle-svg" viewbox="0 0 60 40">
+            <g
+              stroke="#fff"
+              stroke-width="3.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path id="top-line" d="M10,10 L50,10 Z"></path>
+              <path id="middle-line" d="M10,20 L50,20 Z"></path>
+              <path id="bottom-line" d="M10,30 L50,30 Z"></path>
+            </g>
+          </svg>
+        </div>
       </div>
     </header>
     <!-- HEADER ENDS HERE -->
@@ -72,12 +94,12 @@
       <section class="hero-section">
         <div class="slider-container">
           <div class="slider1">
-            <img
-              src="https://st4.depositphotos.com/39251066/40682/i/450/depositphotos_406823840-stock-photo-abstract-geometric-green-yellow-curve.jpg"
-              alt="Heading with Green Background"
-            />
-            <div class="hero-text-and-btn">
-              <h1>WE ARE EXPERTS</h1>
+            <div class="slider-text-and-btn">
+              <div class="slider-heading">
+                <div class="slider-rectangle"></div>
+                <h1>WE ARE EXPERTS</h1>
+                <div class="slider-rectangle"></div>
+              </div>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Aspernatur ipsum dolorum, molestiae voluptas sed alias nam rem
@@ -190,66 +212,42 @@
         <h1>ABOUT <span style="color: var(--main-green)">US</span></h1>
         <div class="about-us-desc">
           <div class="about-us-text-btn">
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Doloremque architecto ipsam id impedit voluptas obcaecati
-              distinctio aliquam cumque quas ut. Eveniet at est ducimus
-              doloribus et veritatis aliquam, nam sapiente.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur
-              repudiandae expedita eius, rerum amet ea sit repellat corrupti
-              quidem, et asperiores itaque reprehenderit. Dolor labore
-              repudiandae quaerat incidunt voluptatum officiis illo tenetur
-              delectus consequuntur, nobis aliquid eos in quae nesciunt neque
-              veritatis praesentium quia itaque sint, consequatur rerum nam!
-              Natus sed eius sequi exercitationem deleniti! Eum ipsa ex dolorum
-              quidem?
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur ad pariatur est consequatur modi. Incidunt ea facilis
-              minus, repudiandae alias sint eaque voluptatum odit repellat fuga
-              sunt labore commodi maiores, error tempore nam neque? Blanditiis
-              provident, autem voluptatum atque similique aspernatur architecto
-              ipsa id tempora cupiditate dolor quia laboriosam quidem unde
-              praesentium sunt nostrum accusantium voluptatem, velit iure
-              corporis ab ratione repellat earum. Eos impedit, possimus quidem
-              consectetur doloribus quas reprehenderit veritatis ipsam labore
-              culpa et sapiente ex distinctio minima.
-            </p>
+            <div class="about-us-paras">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Doloremque architecto ipsam id impedit voluptas obcaecati
+                distinctio aliquam cumque quas ut. Eveniet at est ducimus
+                doloribus et veritatis aliquam, nam sapiente.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Tenetur repudiandae expedita eius, rerum amet ea sit repellat
+                corrupti quidem, et asperiores itaque reprehenderit. Dolor
+                labore repudiandae quaerat incidunt voluptatum officiis illo
+                tenetur delectus consequuntur, nobis aliquid eos in quae
+                nesciunt neque veritatis praesentium quia itaque sint,
+                consequatur rerum nam! Natus sed eius sequi exercitationem
+                deleniti! Eum ipsa ex dolorum quidem?
+              </p>
+              <p style="margin-bottom: 0">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consectetur ad pariatur est consequatur modi. Incidunt ea
+                facilis minus, repudiandae alias sint eaque voluptatum odit
+                repellat fuga sunt labore commodi maiores, error tempore nam
+                neque? Blanditiis provident, autem voluptatum atque similique
+                aspernatur architecto ipsa id tempora cupiditate dolor quia
+                laboriosam quidem unde praesentium sunt nostrum accusantium
+                voluptatem, velit iure corporis ab ratione repellat earum. Eos
+                impedit, possimus quidem consectetur doloribus quas
+                reprehenderit veritatis ipsam labore culpa et sapiente ex
+                distinctio minima.
+              </p>
+            </div>
             <button class="about-read-more-btn">READ MORE</button>
           </div>
           <div class="about-us-images">
-            <div class="laptop-img">
-              <img src="assets/images/laptop.png" alt="Laptop Vector" />
-              <div class="laptop-yellow-screen">
-                <ul>
-                  <li>35%</li>
-                  <li>15%</li>
-                  <li>25%</li>
-                  <li>10%</li>
-                  <li>15%</li>
-                </ul>
-              </div>
-              <div class="laptop-green-screen">
-                <i class="fa-regular fa-user"></i>
-                <i class="fa-solid fa-bullhorn"></i>
-              </div>
-              <div class="dots">
-                <div class="dot"></div>
-
-                <div class="dot"></div>
-
-                <div class="dot"></div>
-              </div>
-              <div class="hands">
-                <i class="fa-solid fa-hand" style="color: #ffbd1a"></i>
-                <i
-                  class="fa-solid fa-hand left-hand"
-                  style="color: #ffbd1a"
-                ></i>
-              </div>
+            <div class="about-us-image">
+              <img src="assets/images/about-us.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -368,16 +366,39 @@
           </ul>
         </div>
         <div class="logo-grid">
-          <div class="porfolio-logo"></div>
-          <!-- <div class="porfolio-logo"></div>
-          <div class="porfolio-logo"></div>
-          <div class="porfolio-logo"></div>
-          <div class="porfolio-logo"></div>
-          <div class="porfolio-logo"></div>
-          <div class="porfolio-logo"></div>
-          <div class="porfolio-logo"></div>
-          <div class="porfolio-logo"></div>
-          <div class="porfolio-logo"></div> -->
+          <div class="porfolio-logo">
+            <img src="assets/images/portfolio-logo1.png" alt="Portfolio Logo" />
+          </div>
+          <div class="porfolio-logo">
+            <img src="assets/images/portfolio-logo2.png" alt="Portfolio Logo" />
+          </div>
+          <div class="porfolio-logo">
+            <img src="assets/images/portfolio-logo3.png" alt="Portfolio Logo" />
+          </div>
+          <div class="porfolio-logo">
+            <img src="assets/images/portfolio-logo4.jpg" alt="Portfolio Logo" />
+          </div>
+          <div class="porfolio-logo">
+            <img src="assets/images/portfolio-logo5.png" alt="Portfolio Logo" />
+          </div>
+          <div class="porfolio-logo">
+            <img src="assets/images/portfolio-logo6.jpg" alt="Portfolio Logo" />
+          </div>
+          <div class="porfolio-logo">
+            <img src="assets/images/portfolio-logo7.png" alt="Portfolio Logo" />
+          </div>
+          <div class="porfolio-logo">
+            <img src="assets/images/portfolio-logo8.jpg" alt="Portfolio Logo" />
+          </div>
+          <div class="porfolio-logo">
+            <img src="assets/images/portfolio-logo9.jpg" alt="Portfolio Logo" />
+          </div>
+          <div class="porfolio-logo">
+            <img
+              src="assets/images/portfolio-logo10.jpg"
+              alt="Portfolio Logo"
+            />
+          </div>
         </div>
       </section>
 
@@ -398,7 +419,7 @@
             <div class="process-icon">
               <span class="process-number">1</span>
               <i
-                class="fa-solid fa-mobile-screen"
+                class="fa-solid fa-mobile-screen process-icons-res"
                 style="color: #8dc63f; font-size: 3.5rem"
               ></i>
             </div>
@@ -406,7 +427,7 @@
             <div class="process-icon">
               <span class="process-number">2</span>
               <i
-                class="fa-solid fa-mobile-screen"
+                class="fa-solid fa-headphones-simple process-icons-res"
                 style="color: #8dc63f; font-size: 3.5rem"
               ></i>
             </div>
@@ -414,7 +435,7 @@
             <div class="process-icon">
               <span class="process-number">3</span>
               <i
-                class="fa-solid fa-mobile-screen"
+                class="fa-solid fa-chalkboard-user process-icons-res"
                 style="color: #8dc63f; font-size: 3.5rem"
               ></i>
             </div>
@@ -422,7 +443,7 @@
             <div class="process-icon">
               <span class="process-number">4</span>
               <i
-                class="fa-solid fa-mobile-screen"
+                class="fa-solid fa-gear process-icons-res"
                 style="color: #8dc63f; font-size: 3.5rem"
               ></i>
             </div>
@@ -430,7 +451,7 @@
             <div class="process-icon">
               <span class="process-number">5</span>
               <i
-                class="fa-solid fa-mobile-screen"
+                class="fa-solid fa-pencil process-icons-res"
                 style="color: #8dc63f; font-size: 3.5rem"
               ></i>
             </div>
@@ -438,7 +459,7 @@
             <div class="process-icon">
               <span class="process-number">6</span>
               <i
-                class="fa-solid fa-mobile-screen"
+                class="fa-solid fa-square-check process-icons-res"
                 style="color: #8dc63f; font-size: 3.5rem"
               ></i>
             </div>
@@ -556,7 +577,7 @@
       <!-- PEOPLE ABOUT US SECTION ENDS HERE  -->
 
       <!-- OUR SKILLS SECTION STARTS HERE  -->
-      <section class="skills">
+      <section class="skills" id="skills">
         <div class="section-heading">
           <h1>OUR <span style="color: var(--main-green)">SKILLS</span></h1>
           <p>
@@ -564,12 +585,327 @@
             deserunt possimus omnis totam!
           </p>
         </div>
+        <div class="skills-circles">
+          <div class="skill-circle-container">
+            <div class="skill-circle1">
+              <div class="skill-circle">
+                <div class="skill-border" style="--bClr: #fe831b"></div>
+                <div
+                  class="skill-percentage-circle"
+                  style="--clr: #febd19; --i: 45%"
+                ></div>
+                <div class="skill-percentage" style="--clr: #fe831b">45%</div>
+              </div>
+            </div>
+            <h2>MARKETING</h2>
+          </div>
+
+          <div class="skill-circle-container">
+            <div class="skill-circle">
+              <div class="skill-border" style="--bClr: #ed7d75"></div>
+              <div
+                class="skill-percentage-circle"
+                style="--clr: #ef4136; --i: 60%"
+              ></div>
+              <div class="skill-percentage" style="--clr: #ef4136">60%</div>
+            </div>
+            <h2>SEO &amp; ADS</h2>
+          </div>
+
+          <div class="skill-circle-container">
+            <div class="skill-circle">
+              <div class="skill-border" style="--bClr: #658e19"></div>
+              <div
+                class="skill-percentage-circle"
+                style="--clr: #8ec63f; --i: 70%"
+              ></div>
+              <div class="skill-percentage" style="--clr: #8ec63f">70%</div>
+            </div>
+            <h2>BRANDING</h2>
+          </div>
+
+          <div class="skill-circle-container">
+            <div class="skill-circle">
+              <div class="skill-border" style="--bClr: #d1d2d4"></div>
+              <div
+                class="skill-percentage-circle"
+                style="--clr: #212121; --i: 80%"
+              ></div>
+              <div class="skill-percentage" style="--clr: #212121">80%</div>
+            </div>
+            <h2>WEB DESIGN</h2>
+          </div>
+        </div>
       </section>
       <!-- OUR SKILLS SECTION ENDS HERE  -->
 
-      <section class="projects"></section>
+      <!-- PACKAGE SECTION -->
+      <section class="packages-section">
+        <div class="packages-section-heading">
+          <h1>AFFORDABLE WEB DESIGN PACKAGES</h1>
+          <p>
+            Experience the industry's best web design deals at 60% Discount with
+            100% Money Back Guarantee.
+          </p>
+        </div>
+        <div class="packages">
+          <div class="package-container">
+            <div class="package1">
+              <h5 class="package-heading">WEB BASIC PREMIUM</h5>
+              <div class="price-container">
+                <p class="price"><small>&dollar;</small>859.00</p>
+                <p class="discount">
+                  <span style="text-decoration: line-through"
+                    >&dollar;2140</span
+                  >
+                  60% off !
+                </p>
+              </div>
+              <div class="services">
+                <p>Unlimited Pages Website</p>
+                <p>1 Design Concept</p>
+                <p>1 Dedicated Designer</p>
+                <p>Turn Around 5 Business Days</p>
+                <p>10 Stock Photos</p>
+                <p>Free On-Page SEO</p>
+                <p>Free 1 Year Web Hosting</p>
+                <p><strong>FREE CMS Integration</strong></p>
+                <p><strong>100%</strong> Satisfaction Guaranteed</p>
+              </div>
+              <div class="order-btn-container">
+                <button class="order-btn">ORDER NOW</button>
+              </div>
+            </div>
+          </div>
+          <div class="package-container">
+            <div class="package2">
+              <h5 class="package-heading">WEB BASIC PLUS</h5>
+              <div class="price-container">
+                <p class="price"><small>&dollar;</small>649.00</p>
+                <p class="discount">
+                  <span style="text-decoration: line-through"
+                    >&dollar;1623</span
+                  >
+                  60% off !
+                </p>
+              </div>
+              <div class="services">
+                <p>7 Pages Website</p>
+                <p>1 Design Concept</p>
+                <p>1 Dedicated Designer</p>
+                <p>Turn Around 5 Business Days</p>
+                <p>7 Stock Photos</p>
+                <p>Free On-Page SEO</p>
+                <p>W3C Certified HTML</p>
+                <p><strong>Add CMS for &dollar;299</strong></p>
+                <p><strong>100%</strong> Satisfaction Guaranteed</p>
+              </div>
+              <div class="order-btn-container">
+                <button class="order-btn">ORDER NOW</button>
+              </div>
+            </div>
+          </div>
+          <div class="package-container">
+            <div class="package3">
+              <h5 class="package-heading">WEB BASIC</h5>
+              <div class="price-container">
+                <p class="price"><small>&dollar;</small>499.00</p>
+                <p class="discount">
+                  <span style="text-decoration: line-through"
+                    >&dollar;1240</span
+                  >
+                  60% off !
+                </p>
+              </div>
+              <div class="services">
+                <p>5 Pages Website</p>
+                <p>1 Design Concept</p>
+                <p>1 Dedicated Designer</p>
+                <p>Turn Around 5 Business Days</p>
+                <p>4 Stock Photos</p>
+                <p>Free On-Page SEO</p>
+                <p>W3C Certified HTML</p>
+                <p><strong>Add CMS for $299</strong></p>
+                <p><strong>100%</strong> Satisfaction Guaranteed</p>
+              </div>
+              <div class="order-btn-container">
+                <button class="order-btn">ORDER NOW</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="all-packages-btn-container">
+          <button class="all-packages-btn">View All Packages</button>
+        </div>
+      </section>
+
+      <section class="new-projects" id="projects">
+        <h1 class="new-projects-heading">START YOUR NEW PROJECT</h1>
+        <div class="project-form">
+          <div class="inputs">
+            <label for="client-name">
+              <input
+                type="text"
+                name="client-name"
+                id="client-name"
+                placeholder="YOUR NAME"
+              />
+            </label>
+            <label for="client-email">
+              <input
+                type="email"
+                name="client-email"
+                id="client-email"
+                placeholder="YOUR EMAIL"
+              />
+            </label>
+            <label for="client-phone">
+              <input
+                type="tel"
+                name="client-phone"
+                id="client-phone"
+                placeholder="YOUR PHONE"
+              />
+            </label>
+          </div>
+          <div>
+            <button type="submit" class="project-form-btn">SEND REQUEST</button>
+          </div>
+        </div>
+
+        <p class="new-projects-para">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, hic
+          deserunt repudiandae eos dolore commodi quam voluptas repellendus
+          perspiciatis maxime incidunt nobis quas.
+        </p>
+      </section>
+
+      <section class="our-contacts" id="contact">
+        <div class="section-heading">
+          <h1>OUR <span style="color: var(--main-green)">CONTACTS</span></h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+            deserunt possimus omnis totam!
+          </p>
+        </div>
+        <div class="contacts-para">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quae
+            tempora ad?
+          </p>
+        </div>
+        <div class="contacts-info">
+          <div class="contacts-first-number">
+            <i class="ri-phone-fill phone-icons"></i>
+            <span>(304) 386-6719</span>
+          </div>
+          <div class="contacts-second-number">
+            <i class="ri-phone-fill phone-icons"></i>
+            <span>(317) 011-3001</span>
+          </div>
+          <div class="contacts-email">
+            <i class="fa-solid fa-envelope"></i>
+            <span>info@website.com</span>
+          </div>
+        </div>
+        <div class="contacts-locations">
+          <div class="location-icon1">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div class="location-icon2">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div class="location-icon3">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div class="location-icon4">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div class="location-icon5">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+        </div>
+      </section>
     </main>
-    <!-- MAIN STARTS HERE -->
-    <footer></footer>
+    <!-- MAIN ENDS HERE -->
+
+    <!-- FOOTER STARTS HERE -->
+
+    <footer>
+      <div class="footer-company-info">
+        <div class="brand-logo-and-info">
+          <img
+            src="assets/images/panaverse-logo.jpg"
+            alt="Panacloud Logo"
+            class="footer-logo"
+          />
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut,
+            recusandae veniam. Quod animi, modi ad omnis quaerat nihil corporis
+            beatae quae perferendis temporibus.
+          </p>
+        </div>
+        <p class="brand-copyright">
+          &copy;Panacloud <span style="font-weight: 500">2019</span>
+        </p>
+      </div>
+      <div class="footer-lists">
+        <h3 class="footer-lists-heading">SERVICES</h3>
+        <ul class="footer-ul">
+          <li>Lorem, ipsum.</li>
+          <li>Lorem</li>
+          <li>Lorem, ipsum dolor.</li>
+          <li>Lorem, ipsum.</li>
+          <li>Lorem</li>
+          <li>Lorem, ipsum dolor.</li>
+          <li>Lorem, ipsum dolor.</li>
+        </ul>
+      </div>
+      <div class="footer-vertical-line"></div>
+      <div class="footer-lists">
+        <h3 class="footer-lists-heading">USEFUL LINKS</h3>
+        <ul class="footer-ul">
+          <li>Lorem, ipsum.</li>
+          <li>Lorem</li>
+          <li>Lorem, ipsum dolor.</li>
+          <li>Lorem, ipsum.</li>
+          <li>Lorem</li>
+          <li>Lorem, ipsum dolor.</li>
+          <li>Lorem, ipsum dolor.</li>
+        </ul>
+      </div>
+      <div class="footer-vertical-line"></div>
+      <div class="footer-contacts">
+        <h3 class="footer-lists-heading">CONTACTS</h3>
+
+        <div class="footer-contact-info">
+          <div class="contacts-first-number">
+            <i class="ri-phone-fill phone-icons"></i>
+            <span>+92(304) 386-6719</span>
+          </div>
+          <div class="contacts-second-number">
+            <i class="ri-phone-fill phone-icons"></i>
+            <span>+92(317) 011-3001</span>
+          </div>
+          <div class="contacts-email">
+            <i class="fa-solid fa-envelope"></i>
+            <span>info@website.com</span>
+          </div>
+        </div>
+        <div class="footer-social-media-info">
+          <h3>FOLLOW US</h3>
+          <div class="footer-sm-icons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- FOOTER ENDS HERE -->
   </body>
 </html>
